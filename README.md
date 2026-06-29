@@ -1,19 +1,20 @@
 # Node ID Jump and Copy
 
-A tiny Figma plugin that does two things:
+Stop scrolling to find Figma nodes. Paste a teammate's URL — you're there in one keystroke.
+And one-click copy node IDs to share with developers, AI tools, or chat.
 
-- **Copy** the selected node's ID with one click
-- **Jump** to any node by pasting an ID or a Figma URL
+## What it does for you
 
-Most "Node ID" plugins only handle the copy side. The unique value here is **jump** — paste a teammate's Figma URL and the plugin selects and zooms to that node, no manual canvas scrolling.
+**Land on the node instantly.** A teammate drops a Figma URL in Slack and you usually have to switch pages, scroll, hunt. Paste the URL (or just the ID) into *Jump to*, press Enter — the canvas lands on the node: page-switched, selected, zoomed. Zero scrolling.
 
-## Features
+**Copy without typing.** Select a node, click the ID under *Selected* — it's on your clipboard. Multi-select grabs them all as a comma-separated list, ready to drop into a chat message or an AI prompt.
 
-- One-click copy of the current node ID
-- Multi-select copies all IDs as a comma-separated string
-- Paste-friendly **Jump to** input — auto-corrects on paste (quotes, URL chrome, and stray characters disappear instantly)
+## Quick start
 
-### Supported input formats (tested)
+- **Copy** — Select a node on the canvas, click the ID shown under *Selected*.
+- **Jump** — Paste anything containing a node ID (raw ID, URL, even with quotes) into *Jump to*, press `Go` or Enter.
+
+## Supported input formats (tested)
 
 | Form                       | Example                                                                         |
 | -------------------------- | ------------------------------------------------------------------------------- |
@@ -24,30 +25,7 @@ Most "Node ID" plugins only handle the copy side. The unique value here is **jum
 | Quoted / backticked        | `'1-234'`, `` `1-234` `` (handy for AI-generated output)                        |
 | Comma-separated multiple   | `1:234, 5:678, I149:71514;140:53105`                                            |
 
-## Install (development plugin)
-
-The Figma **desktop app** is required — the browser version cannot import local plugins.
-
-1. Open the Figma desktop app
-2. Open any file
-3. Menu: `Plugins` → `Development` → `Import plugin from manifest...`
-4. Select this directory's `manifest.json`
-
-The plugin then appears under `Plugins` → `Development` → `Node ID Jump and Copy`.
-
-## Usage
-
-**Copy the current node ID**
-Select a node on the canvas, then click the ID shown under *Selected*. The value is copied to your clipboard.
-
-**Jump to a node**
-Paste an ID, a URL, or any string containing `node-id=...` into the *Jump to* field, then press `Go` (or `Enter`). The plugin switches to the right page, selects the node, and scrolls it into view.
-
-## Files
-
-- `manifest.json` — plugin manifest
-- `code.js` — sandbox-side logic (selection watcher, jump handler)
-- `ui.html` — UI panel (clipboard, paste sanitization, auto-resize)
+The paste field auto-sanitizes — quotes, URL chrome, and stray characters disappear instantly.
 
 ## License
 
@@ -57,24 +35,18 @@ MIT.
 
 ## 日本語
 
-Figma で選んだノードの ID をワンクリックでコピーできる + ID/URL からノードへジャンプできる小さなプラグイン。
+同僚から Figma URL が届いたとき、ページを切り替えてスクロールして目で探す — その手間をなくすための plugin。URL を貼って Enter で該当ノードに飛ぶ。ノード ID のコピーも選択してクリックするだけ。
 
-「Node ID コピー」 系のプラグインは Community に沢山あるが、 「Node ID ジャンプ」 ができるものは見当たらなかったので作った。 Figma URL をそのまま貼れば該当ノードへ飛んで選択状態になる。
+### この plugin で何が変わるか
 
-### インストール
+**ノードに一瞬で着地する。** Slack で URL が飛んできたとき、いつもページ切替＋スクロール＋目視で探していた手間がなくなる。URL（または ID 単体）を *Jump to* に貼って Enter を押すと、canvas がそのノードのあるページに切り替わって選択・zoom まで済んだ状態になる。
 
-Figma **デスクトップアプリ**必須（ブラウザ版は不可）。
-
-1. デスクトップアプリで任意のファイルを開く
-2. `Plugins` → `Development` → `Import plugin from manifest...`
-3. このディレクトリの `manifest.json` を選択
-
-以降は `Plugins` → `Development` → `Node ID Jump and Copy` で起動。
+**ID はクリックするもの。** ノードを選択すると *Selected* に ID が出る。クリックでクリップボードに入る。複数選択すればカンマ区切りでまとめてコピーできるので、チャットや AI プロンプトにそのまま貼ればいい。
 
 ### 使い方
 
-- ノードを選択 → *Selected* の ID をクリックでクリップボードへコピー
-- *Jump to* に ID か URL を貼って `Go`（または Enter）で該当ノードへジャンプ
+- **コピー**: canvas でノードを選択して *Selected* の ID をクリック
+- **ジャンプ**: node ID を含む文字列（生 ID・URL・クォート付きなんでも）を *Jump to* に貼って `Go` か Enter
 
 ### 対応入力形式（動作確認済み）
 
@@ -86,3 +58,5 @@ Figma **デスクトップアプリ**必須（ブラウザ版は不可）。
 | Figma URL 全体                    | `https://www.figma.com/design/.../?node-id=1-234&t=...`                         |
 | クォート/バッククォート付き       | `'1-234'`, `` `1-234` ``（AI 出力のコピペ対策）                                 |
 | カンマ区切り複数 ID               | `1:234, 5:678, I149:71514;140:53105`                                            |
+
+貼った文字列のクォートや URL の余分な部分・空白は自動で除去して処理する。
