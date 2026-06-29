@@ -1,0 +1,8 @@
+{
+  "name": "Node ID Jump and Copy",
+  "id": "node-id-jump-and-copy",
+  "api": "1.0.0",
+  "main": "code.js",
+  "ui": "ui.html",
+  "editorType": ["figma"]
+}
