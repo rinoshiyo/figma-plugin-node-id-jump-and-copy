@@ -1,8 +1,10 @@
 {
   "name": "Node ID Jump and Copy",
-  "id": "node-id-jump-and-copy",
+  "id": "1653298676468201409",
   "api": "1.0.0",
   "main": "code.js",
   "ui": "ui.html",
-  "editorType": ["figma"]
+  "editorType": ["figma"],
+  "networkAccess": { "allowedDomains": ["none"] },
+  "documentAccess": "dynamic-page"
 }
