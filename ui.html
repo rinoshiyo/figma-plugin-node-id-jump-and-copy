@@ -335,6 +335,11 @@
     if (e.key === 'Enter') jumpToNode();
   });
 
+  // クリックでフォーカス時、 mouseup でカーソル位置に置かれる挙動を回避するため次 tick で全選択
+  nodeInput.addEventListener('focus', () => {
+    setTimeout(() => nodeInput.select(), 0);
+  });
+
   document.getElementById('goBtn').addEventListener('click', jumpToNode);
 
   function reportHeight() {
