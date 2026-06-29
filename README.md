@@ -20,7 +20,6 @@ Most "Node ID" plugins only handle the copy side. The unique value here is **jum
 | API form                   | `1:234`                                                                         |
 | URL hyphen form            | `1-234`                                                                         |
 | Instance node (API)        | `I149:71514;140:53105;140:49957`                                                |
-| Instance node (URL hyphen) | `I149-71514;140-53105;140-49957`                                                |
 | Full Figma URL             | `https://www.figma.com/design/.../?node-id=1-234&t=...`                         |
 | Quoted / backticked        | `'1-234'`, `` `1-234` `` (handy for AI-generated output)                        |
 | Comma-separated multiple   | `1:234, 5:678, I149:71514;140:53105`                                            |
@@ -84,7 +83,6 @@ Figma **デスクトップアプリ**必須（ブラウザ版は不可）。
 | API 形式                          | `1:234`                                                                         |
 | URL ハイフン形式                  | `1-234`                                                                         |
 | インスタンス内ノード (API 形式)   | `I149:71514;140:53105;140:49957`                                                |
-| インスタンス内ノード (URL 形式)   | `I149-71514;140-53105;140-49957`                                                |
 | Figma URL 全体                    | `https://www.figma.com/design/.../?node-id=1-234&t=...`                         |
 | クォート/バッククォート付き       | `'1-234'`, `` `1-234` ``（AI 出力のコピペ対策）                                 |
 | カンマ区切り複数 ID               | `1:234, 5:678, I149:71514;140:53105`                                            |

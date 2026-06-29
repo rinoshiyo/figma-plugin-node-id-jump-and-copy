@@ -35,7 +35,6 @@ While "Copy node ID" plugins are common, an actual *jump* — paste a teammate's
 - API form: `1:234`
 - URL hyphen form: `1-234`
 - Instance node (API): `I149:71514;140:53105;140:49957`
-- Instance node (URL hyphen): `I149-71514;140-53105;140-49957`
 - Full Figma URL: `https://www.figma.com/design/.../?node-id=1-234&t=...`
 - Quoted or backticked: `'1-234'`, `` `1-234` `` (handy for AI-generated output)
 - Comma-separated multiple IDs: `1:234, 5:678, I149:71514;140:53105`
