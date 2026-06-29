@@ -21,14 +21,11 @@ Jump to any Figma node from an ID or URL — and copy IDs too.
 ## Description
 
 ```
-Teammate sends you a Figma URL but you still have to manually scroll to find the node? This plugin jumps you there instantly.
+Stop scrolling to find Figma nodes. Paste a teammate's URL — you're there in one keystroke. And one-click copy node IDs to share with developers, AI tools, or chat.
 
-**Two features in one tiny plugin:**
+**Land on the node instantly.** A teammate drops a Figma URL in Slack and you usually have to switch pages, scroll, hunt. Paste the URL (or just the ID) into *Jump to*, press Enter — the canvas lands on the node: page-switched, selected, zoomed. Zero scrolling.
 
-- **Jump** to any node by pasting an ID or a full Figma URL. The plugin switches to the right page, selects the node, and scrolls it into view.
-- **Copy** the selected node's ID with one click. Multi-select copies all IDs comma-separated.
-
-While "Copy node ID" plugins are common, an actual *jump* — paste a teammate's URL and land on the node — was missing from the ecosystem. This plugin fills that gap.
+**Copy without typing.** Select a node, click the ID under *Selected* — it's on your clipboard. Multi-select grabs them all as a comma-separated list, ready to drop into a chat message or an AI prompt.
 
 **Supported input formats:**
 
