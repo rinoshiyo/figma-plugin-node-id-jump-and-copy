@@ -58,7 +58,7 @@ function parseIds(raw) {
     .filter((id) => /^I?\d+:\d+(;I?\d+:\d+)*$/.test(id));
 }
 
-figma.ui.onmessage = (msg) => {
+figma.ui.onmessage = async (msg) => {
   if (msg.type === 'resize') {
     figma.ui.resize(300, Math.max(80, Math.min(600, msg.height | 0)));
     return;
@@ -72,7 +72,8 @@ figma.ui.onmessage = (msg) => {
     return;
   }
 
-  const nodes = ids.map((id) => figma.getNodeById(id)).filter(Boolean);
+  // documentAccess: dynamic-page では同期版 getNodeById が使えないため async 版を Promise.all で並列実行
+  const nodes = (await Promise.all(ids.map((id) => figma.getNodeByIdAsync(id)))).filter(Boolean);
   if (nodes.length === 0) {
     figma.notify('Node not found');
     return;
@@ -80,7 +81,7 @@ figma.ui.onmessage = (msg) => {
 
   const firstPage = getNodePage(nodes[0]);
   if (firstPage && firstPage !== figma.currentPage) {
-    figma.currentPage = firstPage;
+    await figma.setCurrentPageAsync(firstPage);
   }
 
   const onCurrentPage = nodes.filter((n) => getNodePage(n) === figma.currentPage);
