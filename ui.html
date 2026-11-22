@@ -339,6 +339,11 @@
 
   document.getElementById('goBtn').addEventListener('click', jumpToNode);
 
+  // Esc でプラグインを閉じる。キーが届くのは UI にフォーカスがある時のみ（キャンバス側の Esc は Figma 本体が処理する）
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') parent.postMessage({ pluginMessage: { type: 'close' } }, '*');
+  });
+
   function reportHeight() {
     const h = Math.ceil(document.body.getBoundingClientRect().height);
     parent.postMessage({ pluginMessage: { type: 'resize', height: h } }, '*');

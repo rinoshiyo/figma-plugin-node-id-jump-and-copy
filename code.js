@@ -59,6 +59,11 @@ function parseIds(raw) {
 }
 
 figma.ui.onmessage = async (msg) => {
+  if (msg.type === 'close') {
+    figma.closePlugin();
+    return;
+  }
+
   if (msg.type === 'resize') {
     figma.ui.resize(300, Math.max(80, Math.min(600, msg.height | 0)));
     return;
