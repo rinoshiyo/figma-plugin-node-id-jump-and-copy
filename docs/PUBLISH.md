@@ -4,7 +4,7 @@ publish ダイアログ (Figma desktop で plugin 右クリック → `Publish n
 
 ## Publisher
 
-Yoshinori Ishii (本名で登録)
+Yoshinori Ishii
 
 ## Plugin name
 
@@ -23,14 +23,16 @@ Jump to any Figma node from an ID or URL — and copy IDs too.
 ```
 Stop scrolling to find Figma nodes. Paste a teammate's URL — you're there in one keystroke. And one-click copy node IDs to share with developers, AI tools, or chat.
 
-**Land on the node instantly.** A teammate drops a Figma URL in Slack and you usually have to switch pages, scroll, hunt. Paste the URL (or just the ID) into *Jump to*, press Enter — the canvas lands on the node: page-switched, selected, zoomed. Zero scrolling.
+**Land on the node instantly.**
+A teammate drops a Figma URL in Slack and you usually have to switch pages, scroll, hunt. Paste the URL (or just the ID) into *Jump to*, press Enter — the canvas lands on the node: page-switched, selected, zoomed. Zero scrolling.
 
-**Copy without typing.** Select a node, click the ID under *Selected* — it's on your clipboard. Multi-select grabs them all as a comma-separated list, ready to drop into a chat message or an AI prompt.
+**Copy without typing.**
+Select a node, click the ID under *Selected* — it's on your clipboard. Multi-select grabs them all as a comma-separated list, ready to drop into a chat message or an AI prompt.
 
-**Close with Esc.** Done copying or jumping? Press Esc to close the window — no need to reach for the X. (Esc works while the plugin window has focus, e.g. right after you click the ID or press Enter.)
+**Close with Esc.**
+Done copying or jumping? Press Esc to close the window — no need to reach for the X. (Esc works while the plugin window has focus, e.g. right after you click the ID or press Enter.)
 
 **Supported input formats:**
-
 - API form: `1:234`
 - URL hyphen form: `1-234`
 - Instance node (API): `I149:71514;140:53105;140:49957`
@@ -41,7 +43,6 @@ Stop scrolling to find Figma nodes. Paste a teammate's URL — you're there in o
 The paste field auto-sanitizes — quotes, URL chrome, and stray characters disappear instantly.
 
 **Source & support:**
-
 GitHub: https://github.com/rinoshiyo/figma-plugin-node-id-jump-and-copy
 
 Issues are welcome on a best-effort basis (no SLA). MIT licensed — feel free to fork.
@@ -57,7 +58,7 @@ Issues are welcome on a best-effort basis (no SLA). MIT licensed — feel free t
 
 ## Tags
 
-(未確定)
+コード生成
 
 ## Support contact
 
@@ -67,4 +68,4 @@ https://github.com/rinoshiyo/figma-plugin-node-id-jump-and-copy/issues
 
 ## Categories
 
-(未確定)
+ソフトウェア開発
