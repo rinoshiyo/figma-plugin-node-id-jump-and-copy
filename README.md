@@ -13,6 +13,7 @@ And one-click copy node IDs to share with developers, AI tools, or chat.
 
 - **Copy** — Select a node on the canvas, click the ID shown under *Selected*.
 - **Jump** — Paste anything containing a node ID (raw ID, URL, even with quotes) into *Jump to*, press `Go` or Enter.
+- **Close** — Press Esc while the plugin window is focused (e.g. right after copying or jumping).
 
 ## Supported input formats (tested)
 
@@ -47,6 +48,7 @@ MIT.
 
 - **コピー**: canvas でノードを選択して *Selected* の ID をクリック
 - **ジャンプ**: node ID を含む文字列（生 ID・URL・クォート付きなんでも）を *Jump to* に貼って `Go` か Enter
+- **閉じる**: plugin のウィンドウにフォーカスがある時（コピーやジャンプの直後など）に Esc
 
 ### 対応入力形式（動作確認済み）
 
