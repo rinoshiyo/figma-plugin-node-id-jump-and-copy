@@ -27,6 +27,8 @@ Stop scrolling to find Figma nodes. Paste a teammate's URL — you're there in o
 
 **Copy without typing.** Select a node, click the ID under *Selected* — it's on your clipboard. Multi-select grabs them all as a comma-separated list, ready to drop into a chat message or an AI prompt.
 
+**Close with Esc.** Done copying or jumping? Press Esc to close the window — no need to reach for the X. (Esc works while the plugin window has focus, e.g. right after you click the ID or press Enter.)
+
 **Supported input formats:**
 
 - API form: `1:234`
